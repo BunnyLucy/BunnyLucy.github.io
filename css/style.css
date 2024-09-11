@@ -3001,10 +3001,19 @@ input[type="range"] {
 .gif-container {
   position: fixed;
   bottom: 10px;
-  right: 50px;
+  right: 10px;
   z-index: 1000; /* 确保在其他元素之上显示 */
 }
 .gif-container img {
-  width: 320px; /* 根据需要调整尺寸 */
+  width: 320px; /* 默认尺寸 */
   height: auto;
+  max-width: 100%; /* 确保图片不会超过屏幕宽度 */
+  max-height: 100%; /* 确保图片不会超过屏幕高度 */
+}
+@media (max-width: 600px) {
+  .gif-container img {
+    width: 100px; /* 为小屏幕设备调整图片尺寸 */
+    max-width: 100px;
+    max-height: 100px;
+  }
 }
