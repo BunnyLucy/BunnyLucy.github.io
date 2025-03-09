@@ -45,7 +45,7 @@
 <meta property="og:image" content="http://example.com/img/stick.avif">
 <meta property="og:image" content="http://example.com/img/theme.avif">
 <meta property="article:published_time" content="2025-03-08T12:49:50.000Z">
-<meta property="article:modified_time" content="2025-03-09T16:41:25.946Z">
+<meta property="article:modified_time" content="2025-03-09T17:10:32.613Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="干货">
 <meta property="article:tag" content="教程">
@@ -365,7 +365,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            2822 words 
+            4609 words 
           </div>
         </div>
         
@@ -431,6 +431,28 @@
 <p> <img src="/img/stick.avif" alt="粘贴文件"></p>
 <p> 在cmd中输入<code>hexo config theme vivia</code> <code>hexo new page about</code> <code>hexo server</code>，重新访问<code>localhost:4000</code>，已经可以看到更换好的主题了！</p>
 <p> <img src="/img/theme.avif" alt="主题部署完成"></p>
+</li>
+<li><p>编辑主页</p>
+ <details>
+   <summary>什么是vscode？</summary>
+   <p>vscode是一个很好用的编译器，使用它编辑你的文件会非常方便。如果你还没有vscode或其替代产品，请访问<a href="https://code.visualstudio.com/" target="_blank">vscode官网</a>下载你电脑对应的版本。安装过程中记得勾选“将Code添加到PATH”“启用Git Bash终端支持”，无需勾选一些编程语言如C、Python等的相关支持。</p>
+ </details>
+
+<p> 用vscode以folder形式整体打开你的hexo文件夹，选择_config.yml文件，将第一行的title冒号后改为你对自己个人博客的称呼，如本站即为“Yishu’s BLOG”。</p>
+<p> 选择_config.vivia.yml文件，其中需要修改的地方大多有详细的中文注释，跟随注释操作即可。</p>
+<p> <strong>一些TIPS</strong></p>
+<ul>
+<li><p>任何图片都建议转化为avif格式（gif图片转为webp），可以有效提升加载速度。在浏览器搜索avif图片格式转换就能找到很多转换器，也可以点<a target="_blank" rel="noopener" href="https://to.imagestool.com/zh-CN/image-converter">这里</a>直达其一</p>
+</li>
+<li><p>横幅图片banner如果想展示的话将enable冒号后的false改为true，在url处填写你图片的地址。如果图片存放在本地，直接填写对&#x2F;source的相对目录；如果存放在github仓库中建议使用cdn以加速国内访问。cdn使用格式示例：原文件路径<code>https://github.com/aaa/aaa.github.io/img/1.avif </code>，直接在你需要填写图片链接的地方填写<code>https://gcore.jsdelivr.net/gh/aaa/aaa.github.io/img/1.avif </code>即可通过cdn加速</p>
+</li>
+<li><p>个人信息的links部分可以换成你在其他平台的个人主页链接，通过访问<a target="_blank" rel="noopener" href="https://fontawesome.com/search">图标库</a>可以找到一些国际主流社交媒体如steam、github、纸飞机等的图标，你也可以在这个网站编辑你想要的图标比如lofter等，帮助快速跳转你的其他平台</p>
+</li>
+<li><p>侧边栏的sticky中默认不显示archive（时间轴）和recent_posts（最近帖子），希望显示的话可以把行前的井号删掉。同理不想显示的部分在行前打井号即可</p>
+</li>
+<li><p><strong>高亮！！</strong>如果你不打算使用评论系统，不要动原来的代码！打算使用的话请复制以下代码替换掉原本的comment部分全部内容！其中，appID、appKey的填写以及如何安装评论系统，请访问其<a target="_blank" rel="noopener" href="https://valine.js.org/quickstart.html">官方指引</a><br>  comment:<br>    valine:<br>      enable: true           # 启用 Valine 评论系统<br>      appId:<br>      appKey:<br>      placeholder: 留下一点什么吧！ # 评论框的占位符文本<br>      pageSize: 10            # 每页显示评论数<br>      highlight: true         # 启用代码高亮<br>      visitor: true<br>      avatar: mm<br>      serverURLs: <a target="_blank" rel="noopener" href="https://api.leancloud.cn/">https://api.leancloud.cn</a></p>
+</li>
+</ul>
 </li>
 </ol>
 
